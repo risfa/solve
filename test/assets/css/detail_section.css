@@ -1,0 +1,54 @@
+.title h1{
+	font-weight: bold;
+	margin-left: 35px;
+}
+
+.sectionIsi{
+	position:relative;
+	float:left;
+	width:305px;
+	height:auto;
+	margin-left: 10px;
+	margin-bottom:10px;
+}
+
+.sectionIsi label{
+	position: absolute;
+	top:8px;
+	right: 32px;
+}
+
+.sectionIsi .imgSection{
+	position: absolute;
+	top:-250px;
+	left:14px;
+	width: 85% !important;
+}
+
+.sectionIsi > div:last-child{
+	margin-top: -10px;
+	margin-left: 18px;
+	line-height:18px;
+}
+
+.sectionIsi p{
+	margin: 0;
+	font-weight: bold;
+}
+
+.footSection{
+	color:#fff;
+	position: absolute;
+	top: -73px;
+	left: 14px;
+	width: 259px;
+	padding-left: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.panah{
+	position:absolute;
+	top:5px;
+	right:10px;
+}

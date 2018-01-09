@@ -1,0 +1,35 @@
+[10-Mar-2015 13:43:48 UTC] PHP Strict Standards:  Declaration of SafeSQL_MySQL::_sql_escape() should be compatible with SafeSQL::_sql_escape() in /home/dapps/public_html/ruffle/process/db/SafeSQL.class.php on line 247
+[10-Mar-2015 13:43:48 UTC] PHP Strict Standards:  Declaration of SafeSQL_ANSI::_sql_escape() should be compatible with SafeSQL::_sql_escape() in /home/dapps/public_html/ruffle/process/db/SafeSQL.class.php on line 272
+[10-Mar-2015 13:43:48 UTC] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home/dapps/public_html/ruffle/process/db/SafeSQL.class.php:247) in /home/dapps/public_html/ruffle/process/db/db.php on line 11
+[10-Mar-2015 13:43:48 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/dapps/public_html/ruffle/process/db/SafeSQL.class.php:247) in /home/dapps/public_html/ruffle/process/db/db.php on line 11
+[10-Mar-2015 13:43:48 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/dapps/public_html/ruffle/process/db/SafeSQL.class.php:247) in /home/dapps/public_html/ruffle/process/do-insert-member.php on line 44
+[10-Mar-2015 13:44:47 UTC] PHP Strict Standards:  Declaration of SafeSQL_MySQL::_sql_escape() should be compatible with SafeSQL::_sql_escape() in /home/dapps/public_html/ruffle/process/db/SafeSQL.class.php on line 247
+[10-Mar-2015 13:44:47 UTC] PHP Strict Standards:  Declaration of SafeSQL_ANSI::_sql_escape() should be compatible with SafeSQL::_sql_escape() in /home/dapps/public_html/ruffle/process/db/SafeSQL.class.php on line 272
+[10-Mar-2015 13:44:47 UTC] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home/dapps/public_html/ruffle/process/db/SafeSQL.class.php:247) in /home/dapps/public_html/ruffle/process/db/db.php on line 11
+[10-Mar-2015 13:44:47 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/dapps/public_html/ruffle/process/db/SafeSQL.class.php:247) in /home/dapps/public_html/ruffle/process/db/db.php on line 11
+[10-Mar-2015 13:44:47 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/dapps/public_html/ruffle/process/db/SafeSQL.class.php:247) in /home/dapps/public_html/ruffle/process/do-insert-member.php on line 19
+[17-Mar-2015 12:51:05 UTC] PHP Parse error:  syntax error, unexpected 'die' (T_EXIT) in /home/dapps/public_html/solve/process/do-insert-member.php on line 88
+[17-Mar-2015 12:51:11 UTC] PHP Parse error:  syntax error, unexpected 'die' (T_EXIT) in /home/dapps/public_html/solve/process/do-insert-member.php on line 88
+[30-Mar-2015 15:53:28 UTC] PHP Warning:  require_once(../include/function.php): failed to open stream: No such file or directory in /home/dapps/public_html/solve/process/do-insert-member.php on line 6
+[30-Mar-2015 15:53:28 UTC] PHP Fatal error:  require_once(): Failed opening required '../include/function.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/dapps/public_html/solve/process/do-insert-member.php on line 6
+[30-Mar-2015 15:54:17 UTC] PHP Warning:  require_once(../include/function.php): failed to open stream: No such file or directory in /home/dapps/public_html/solve/process/do-insert-member.php on line 6
+[30-Mar-2015 15:54:17 UTC] PHP Fatal error:  require_once(): Failed opening required '../include/function.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/dapps/public_html/solve/process/do-insert-member.php on line 6
+[30-Mar-2015 15:54:40 UTC] PHP Warning:  require_once(../includes/function.php): failed to open stream: No such file or directory in /home/dapps/public_html/solve/process/do-insert-member.php on line 6
+[30-Mar-2015 15:54:40 UTC] PHP Fatal error:  require_once(): Failed opening required '../includes/function.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/dapps/public_html/solve/process/do-insert-member.php on line 6
+[19-May-2015 12:01:43 UTC] PHP Warning:  json_decode() expects parameter 1 to be string, array given in /home/dapps/public_html/solve/process/do-insert-member.php on line 79
+[19-May-2015 12:10:57 UTC] PHP Warning:  json_decode() expects parameter 1 to be string, array given in /home/dapps/public_html/solve/process/do-insert-member.php on line 79
+[19-May-2015 13:49:05 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/dapps/public_html/solve/process/do-get-prize.php on line 29
+[23-May-2015 18:25:12 Asia/Jakarta] PHP Warning:  Unknown column 'unique_id' in 'where clause' in /home/dapps/public_html/solve/process/db/mysql.php on line 211
+[23-May-2015 18:27:17 Asia/Jakarta] PHP Warning:  Unknown column 'unique_id' in 'where clause' in /home/dapps/public_html/solve/process/db/mysql.php on line 211
+[23-May-2015 19:00:58 Asia/Jakarta] PHP Fatal error:  Call to a member function setToken() on a non-object in /home/dapps/public_html/solve/process/do-insert-ktp.php on line 48
+[24-May-2015 06:35:50 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/dapps/public_html/solve/process/do-get-prize.php on line 99
+[24-May-2015 06:38:01 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/dapps/public_html/solve/process/do-insert-ktp.php on line 57
+[01-Jul-2015 10:15:21 UTC] PHP Parse error:  syntax error, unexpected '||' (T_BOOLEAN_OR), expecting ',' or ')' in /home/dapps/public_html/solve/process/do-insert-member.php on line 105
+[07-Jul-2015 03:09:29 Asia/Jakarta] PHP Warning:  Invalid argument supplied for foreach() in /home/dapps/public_html/solve/process/do-get-prize.php on line 49
+[07-Jul-2015 13:28:18 Asia/Jakarta] PHP Fatal error:  Unsupported operand types in /home/dapps/public_html/solve/process/do-get-prize.php on line 52
+[07-Jul-2015 13:29:05 Asia/Jakarta] PHP Warning:  Illegal offset type in /home/dapps/public_html/solve/process/do-get-prize.php on line 52
+[07-Jul-2015 08:38:32 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/dapps/public_html/solve/process/do-insert-ktp.php on line 19
+[08-Jul-2015 06:01:33 UTC] PHP Parse error:  syntax error, unexpected 'header' (T_STRING) in /home/dapps/public_html/solve/process/do-get-prize.php on line 168
+[08-Jul-2015 09:09:11 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/dapps/public_html/solve/process/do-insert-member.php on line 128
+[09-Jul-2015 16:59:08 Asia/Jakarta] PHP Fatal error:  Call to undefined function autopost() in /home/dapps/public_html/solve/process/do-get-prize.php on line 166
+[09-Jul-2015 16:59:25 Asia/Jakarta] PHP Fatal error:  Call to undefined function autopost() in /home/dapps/public_html/solve/process/do-get-prize.php on line 166

@@ -1,0 +1,230 @@
+<?php 
+	$url = $_SERVER['REQUEST_URI'];
+	$res = explode("/",$url);
+	array_pop($res);
+	$url = implode("/",$res);
+?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>SOLVE - PANEL</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="<?php echo base_url("/assets/css/bootstrap.min.css"); ?>" rel="stylesheet">
+
+	
+		<link href="<?php echo base_url("/assets/css/metisMenu.min.css");?>" rel="stylesheet">
+	
+	
+    <!-- Timeline CSS -->
+    <link href="<?php echo base_url("/assets/css/timeline.css");?>" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="<?php echo base_url("/assets/css/sb-admin-2.css");?>" rel="stylesheet">
+		<link href="<?php echo base_url("/assets/css/AdminLTE.min.css");?>" rel="stylesheet" type="text/css" />
+	
+		<!-- DataTables CSS -->
+    <link href="<?php echo base_url("/assets/css/dataTables.bootstrap.css");?>" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="<?php echo base_url("/assets/css/morris.css");?>" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<link href="http://code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+		
+		<script type="text/javascript" src="<?php echo base_url("/assets/js/jquery-1.11.1.min.js") ?>"></script>
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>	
+		<script type="text/javascript">
+			google.load("visualization", "1", {packages:["corechart,table"]});
+			var url = "<?php echo $url ?>";
+
+			function numberWithCommas(x) {
+				var parts = x.toString().split(".");
+				parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+				return parts.join(".");
+			}
+			
+			function change(event) {
+				event = encodeURIComponent(event);
+				window.location = url+"/"+event;
+			}
+		</script>
+  </head>
+
+  <body>
+   <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><img src="<?php echo base_url("/assets/images/SOLVE.png"); ?>" width="20px"/> SOLVE - PANEL</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+								<?php if($status == "superadmin"){ ?>
+								<li>
+									<div class="form-inline">
+										<select class="form-control" id="select_event" onchange="change(this.value)">
+											<?php 
+												if(isset($event)){
+													foreach($event as $key=>$value){
+											?>
+											<option <?php echo ($value['event_name'] == $event_selected)? "selected":""; ?> value="<?php echo $value['event_name']; ?>" ><?php echo $value['event_name']; ?></option>
+											<?php
+													}
+												}
+											?>
+										</select>
+									</div>
+								</li>
+								<?php } ?>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="<?php echo base_url("/home/logout"); ?>"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+												<?php if($status == "superadmin"){ ?>
+                        <li>
+													<a <?php echo isset($class['active_home'])?$class['active_home']:""; ?> href="<?php echo base_url("/home/".$event_selected); ?>"><i class="fa fa-home fa-fw"></i> Home</a>
+                        </li>
+												<?php }
+													//if($status == "superadmin"){ 
+												?>
+												<!--<li>
+													<a href="#"><i class="fa fa-flag fa-fw"></i> Event<span class="fa arrow"></span></a>
+													<ul class="nav nav-second-level">
+														<?php 
+															if(isset($event)){
+																foreach($event as $key=>$value){ 
+														?>
+														<li>
+															<a href="<?php echo base_url("/home/".$value['event_name']); ?>"><?php echo $value['event_name']; ?></a>
+														</li>
+														<?php 
+																}
+															}
+														?>
+													</ul>
+                        </li>-->
+												<?php //}
+												if($status == "admin" || $status == "superadmin"){ ?>
+												<li <?php echo isset($class['active_admin_event'])?$class['active_admin_event']:""; ?>>
+                            <a href="#"><i class="fa fa-child fa-fw"></i> Admin Event<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level <?php echo isset($class['active_admin_event'])?"collapse in":"" ?>" <?php echo isset($class['active_admin_event'])?"aria-expanded='true'":""?>>
+                                <li>
+                                    <a <?php echo isset($class['active_dashboard'])?$class['active_dashboard']:""; ?> href="<?php echo base_url("/admin_event_dashboard/".$event_selected); ?>">Dashboard</a>
+                                </li>
+                                <li>
+                                    <a <?php echo isset($class['active_insert_tl'])?$class['active_insert_tl']:""; ?> href="<?php echo base_url("/insert_team_leader/".$event_selected); ?>">Insert Team Leader</a>
+                                </li>
+																<li>
+																	<a <?php echo isset($class['active_harga'])?$class['active_harga']:""; ?> href="<?php echo base_url("/harga/".$event_selected); ?>">Insert Price</a>
+																</li>
+																<li>
+																	<a <?php echo isset($class['active_prize'])?$class['active_prize']:""; ?> href="<?php echo base_url("/prize/".$event_selected); ?>">Insert Prize</a>
+																</li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+												<?php } 
+													if($status == "leader" || $status == "superadmin"){
+												?>
+                        <li <?php echo isset($class['active_tl'])?$class['active_tl']:""; ?>>
+                            <a href="#"><i class="fa fa-users fa-fw"></i> Team Leader<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level <?php echo isset($class['active_tl'])?"collapse in":"" ?>" <?php echo isset($class['active_tl'])?"aria-expanded='true'":""?>">
+                                <li>
+                                    <a <?php echo isset($class['active_tl_dashboard'])?$class['active_tl_dashboard']:""; ?> href="<?php echo base_url("/tl_event_dashboard/".$event_selected); ?>">Dashboard</a>
+                                </li>
+                                <li>
+                                    <a <?php echo isset($class['active_insert_spg'])?$class['active_insert_spg']:""; ?> href="<?php echo base_url("/insert_spg/".$event_selected); ?>">Insert SPG</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+												<?php } ?>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <?php echo $content; ?>
+		
+    </div>
+		
+	<script type="text/javascript">
+		function goBack() {
+			window.history.back();
+		}
+	</script>
+	
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    
+	<script src="<?php echo base_url("/assets/js/jquery.js"); ?>"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="<?php echo base_url("/assets/js/bootstrap.min.js"); ?>"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="<?php echo base_url("/assets/js/plugins/metisMenu/metisMenu.min.js"); ?>"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="<?php echo base_url("/assets/js/plugins/morris/raphael.min.js"); ?>"></script>
+    <script src="<?php echo base_url("/assets/js/plugins/morris/morris.min.js"); ?>"></script>
+	
+	<!-- DataTables JavaScript -->
+    <script src="<?php echo base_url("/assets/js/plugins/dataTables/jquery.dataTables.js"); ?>"></script>
+    <script src="<?php echo base_url("/assets/js/plugins/dataTables/dataTables.bootstrap.js"); ?>"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="<?php echo base_url("/assets/js/sb-admin-2.js"); ?>"></script>
+	
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	
+	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#dataTables-example').dataTable();
+		});
+		
+		$(function() {
+			$( "#datepicker" ).datepicker({ dateFormat: 'yy-mm-dd' }).val();
+			$( "#datepicker2" ).datepicker({ dateFormat: 'yy-mm-dd' }).val();
+		});
+    </script>
+  </body>
+</html>

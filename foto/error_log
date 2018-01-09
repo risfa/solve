@@ -1,0 +1,10 @@
+[23-May-2015 09:59:47 UTC] PHP Warning:  include(process/db/db.php): failed to open stream: No such file or directory in /home/dapps/public_html/solve/foto/index.php on line 3
+[23-May-2015 09:59:47 UTC] PHP Warning:  include(): Failed opening 'process/db/db.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/dapps/public_html/solve/foto/index.php on line 3
+[23-May-2015 09:59:47 UTC] PHP Warning:  mysql_query(): Access denied for user 'dapps'@'localhost' (using password: NO) in /home/dapps/public_html/solve/foto/index.php on line 46
+[23-May-2015 09:59:47 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/dapps/public_html/solve/foto/index.php on line 46
+[23-May-2015 09:59:47 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/dapps/public_html/solve/foto/index.php on line 48
+[23-May-2015 09:59:47 UTC] PHP Warning:  include(footer.php): failed to open stream: No such file or directory in /home/dapps/public_html/solve/foto/index.php on line 248
+[23-May-2015 09:59:47 UTC] PHP Warning:  include(): Failed opening 'footer.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/dapps/public_html/solve/foto/index.php on line 248
+[23-May-2015 10:00:05 UTC] PHP Warning:  include(footer.php): failed to open stream: No such file or directory in /home/dapps/public_html/solve/foto/index.php on line 248
+[23-May-2015 10:00:05 UTC] PHP Warning:  include(): Failed opening 'footer.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/dapps/public_html/solve/foto/index.php on line 248
+[23-May-2015 10:08:35 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/dapps/public_html/solve/foto/index.php on line 194

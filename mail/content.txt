@@ -1,0 +1,32 @@
+<html>
+<head>
+  <title>Amplified 5D</title>
+</head>
+<body>
+  	<img src="https://www.5dapps.com/debi/images/Header_Amplified_1.jpg">
+  	<br>
+	<br>
+	Halo SuperHero!
+	<br>
+	<br>
+	Selamat! Anda telah terdaftar dalam event<br>
+	Amplified<br>
+	<br>
+	<br>
+	Apabila ada pertanyaan terkait event ini dapat menghubungi :<br>
+	- Ayu, email: ayu@ardency-adprom.com, telp: 083899364699<br>
+        - Hanna, email: hanna@ardency-adprom.com, telp: 081319760315<br>
+        - Tommy, email: tommy@limadigit.com, telp: 08161988871<br><br>
+	LimaDigit is subsidiary of Ardency Adprom<br>
+	Limadigit<br>
+	Komplek Kebayoran center,<br>
+	Jl. Raya Kebayoran Baru, Block A-17<br>
+	Jakarta 12240<br>
+	Indonesia.<br><br>
+
+	Terima kasih.<br><br>
+
+	Salam,<br>
+	Marketing support ARD-5D
+</body>
+</html>

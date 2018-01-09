@@ -1,0 +1,46 @@
+#slider-wrapper {
+	width:93%;
+	height:350px;
+}
+
+#slider {
+	width:100%;
+	position:relative;
+	background:red;
+}
+.sp {
+	width:100%;
+	position:absolute;
+}
+
+#nav-wrapper {
+	width:93%;
+	background:red;
+	font-size:20px;
+}
+
+#button-previous {
+	cursor:pointer;
+	padding:3 8 3 8;
+	
+}
+
+#button-next {
+	cursor:pointer;
+	padding:3 8 3 8;
+}
+
+.text-container{
+	width:100%;
+	background:#5C2B59;
+	min-height:37px;
+	padding-left:3px;
+}
+
+.text-style{
+	width:75%;
+	color:#FFFFFF;
+	text-align:center;
+	vertical-align:text-bottom;
+	font-weight:bold;
+}

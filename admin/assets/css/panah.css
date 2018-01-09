@@ -1,0 +1,24 @@
+.panah{
+	position:absolute;
+	top:215px;
+	right:42px;
+}
+
+.buttonPanah{
+	background:#fff;
+	border-radius: 50%;
+	padding-top: 1px;
+	padding-left: 6px;
+	padding-bottom: 1px;
+	padding-right: 6px;
+	color:#000;
+	text-decoration:none;
+	font-weight:bold;
+	margin-left:2px;
+	cursor: pointer;
+}
+
+.buttonPanah:hover, .buttonPanah:visited{
+	text-decoration: none;
+	color:#000;
+}

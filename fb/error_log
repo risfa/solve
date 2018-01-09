@@ -1,0 +1,2 @@
+[23-May-2015 08:27:26 UTC] PHP Warning:  Unknown column 'fb_id' in 'where clause' in /home/dapps/public_html/solve/process/db/mysql.php on line 211
+[23-May-2015 08:34:34 UTC] PHP Warning:  Unknown column 'fb_id' in 'where clause' in /home/dapps/public_html/solve/process/db/mysql.php on line 211
