@@ -4,12 +4,12 @@ error_reporting(0);
 include_once "core.php";
 include_once "mysql.php";
 require 'SafeSQL.class.php';
-$db = new ezSQL_mysql('dapps_adminruff','admin5D','dapps_ruffle','localhost');
+$db = new ezSQL_mysql('dapps','l1m4d1g1t','dapps_joker_ruffle','localhost');
 
 $safesql = new SafeSQL_MySQL;
 
-mysql_connect("localhost", "dapps_adminruff", "admin5D");
-mysql_select_db("dapps_ruffle");
+mysql_connect("localhost", "dapps", "l1m4d1g1t");
+mysql_select_db("dapps_joker_ruffle");
 session_start();
 
 $config = array();

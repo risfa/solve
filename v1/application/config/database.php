@@ -48,10 +48,10 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = '5dapps.com';
+$db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'dapps';
-$db['default']['password'] = 'admin5D';
-$db['default']['database'] = 'dapps_solve';
+$db['default']['password'] = 'l1m4d1g1t';
+$db['default']['database'] = 'dapps_joker_solve';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;

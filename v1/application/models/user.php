@@ -16,7 +16,7 @@ class User extends CI_Model
             $response['message'] = "login success";
         } else {
             $response['status'] = false;
-            $response['message'] = "invalid username and password";
+            $response['message'] = "invalid username or password";
         }
         return $response;
     }

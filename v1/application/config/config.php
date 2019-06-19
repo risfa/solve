@@ -22,7 +22,7 @@
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'https://5dapps.com/solve/v1/';
+$config['base_url'] = 'http://joker.5dapps.com/solve/v1/';
 
 /*
 |--------------------------------------------------------------------------

@@ -31,11 +31,11 @@
                 // echo $_GET['event']."BABA";
             }
         ?>
-        <select class="form-control" name="event_id" id="event-id" style="display: none">
+        <select class="form-control" name="event_id" id="event-id" style="">
             <?php
             // foreach ($events as $e){
                 // echo '<option value="'.$e->event_id.'">'.$e->event_name.'</option>';
-                echo '<option value="'.$_GET['event'].'">'./*$e->event_name*/ASD.'</option>';
+                echo '<option value="'.$_GET['event'].'">'./*$e->event_name*/$_GET['event'].'</option>';
             // }
             ?>
         </select>
